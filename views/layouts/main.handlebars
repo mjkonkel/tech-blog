@@ -18,9 +18,12 @@
       <nav>
         {{#if logged_in}}
         <!-- Conditionally render login or logout links -->
-        <a href="/homepage">profile</a> |
+        <a href="/homepage">homepage</a> |
+        <a href="/dashboard">dashboard</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
+        <a href="/homepage">homepage</a> |
+        <a href="/dashboard">dashboard</a> |
         <a href="/login">login</a>
         {{/if}}
       </nav>
