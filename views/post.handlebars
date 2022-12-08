@@ -1,0 +1,17 @@
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>test{{post.title}}</h2>
+    <p>test{{post.content}}</p>
+    {{!-- <p>Created by {{post.user.username}} on {{format_date post.createdAt}}</p> --}}
+    <p>Created by {{post.user.username}}</p>
+  </div>
+  <form class="form comment-form">
+      <div class="form-group">
+        <label for="comment-content">comment:</label>
+        <input class="form-input" type="text" id="comment-content" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">post</button>
+      </div>
+    </form>
+</div>
