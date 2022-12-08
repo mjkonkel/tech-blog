@@ -6,7 +6,7 @@
       <a href="/post/{{post.id}}">{{post.title}}</a>
     </h2>
     {{!-- <p>Created by {{post.user.username}} on {{format_date post.created_at}}</p> --}}
-    <p>Created by {{post.user.username}} on {{post.createdAt}}</p>
+    <p>Posted on {{format_date post.createdAt}}</p>
   </div>
 </div>
 {{/each}}
