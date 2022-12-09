@@ -1,9 +1,8 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
-    <h2>test{{post.title}}</h2>
-    <p>test{{post.content}}</p>
-    {{!-- <p>Created by {{post.user.username}} on {{format_date post.createdAt}}</p> --}}
-    <p>Created by {{post.user.username}}</p>
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
   </div>
   <form class="form comment-form">
       <div class="form-group">
