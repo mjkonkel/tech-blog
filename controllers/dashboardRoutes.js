@@ -29,14 +29,13 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/add', withAuth, async (req, res) => {
-    res.render('add', { 
+router.get('/postCreate', withAuth, async (req, res) => {
+    res.render('postCreate', { 
       logged_in: req.session.logged_in 
     });
 })
 
-router.post('/add', withAuth, async (req, res) => {
-  // router.post("/", async (req, res) => {
+router.post('/postCreate', withAuth, async (req, res) => {
     try {
       const newPost = await Post.create({
         ...req.body,
