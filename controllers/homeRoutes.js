@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post, User } = require("../models");
+const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -54,15 +54,20 @@ router.get("/post/:id", withAuth, async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ["username"],
         },
       ],
     });
 
+    const commentData = await Comment.findAll({
+      where: { post_id: req.params.id },
+    });
+console.log(commentData)
     const post = postData.get({ plain: true });
-console.log(post)
+    // const comments = commentData.get({ plain: true });
     res.render("postView", {
       ...post,
+      comments: commentData,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
