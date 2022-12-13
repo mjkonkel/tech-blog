@@ -8,6 +8,7 @@
     <div class="form-group">
       <label for="comment-content">comment:</label>
       <input class="form-input" type="text" id="comment-content" />
+      <input class="form-input" type="hidden" id="post_id" value="{{id}}" />
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit">post</button>
@@ -15,18 +16,18 @@
   </form>
 </div>
 {{! conditional to show post comments }}
-{{!-- comment, username, date created --}}
+{{! comment, username, date created }}
 
-{{#each comments as |comment| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <a href="/post/{{post.id}}">{{post.title}}</a>
-    </h2>
-    {{!-- <p>Created by {{post.user.username}} on {{format_date post.created_at}}</p> --}}
-    <p>Posted on {{format_date post.createdAt}}</p>
+{{#each comments as |comment|}}
+  <div class="row mb-4 project">
+    <div class="col-md-5">
+      <h2>
+        <a>{{comment.dataValues.content}}</a>
+      </h2>
+      {{!-- <p>Created by {{post.user.username}} on {{format_date post.created_at}}</p> --}}
+      {{!-- <p>Posted on {{format_date comment.createdAt}}</p> --}}
+    </div>
   </div>
-</div>
 {{/each}}
 
 <script src="/js/comment.js"></script>
