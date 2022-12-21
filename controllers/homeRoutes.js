@@ -62,7 +62,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
     const commentData = await Comment.findAll({
       where: { post_id: req.params.id },
     });
-console.log(commentData)
+    console.log(commentData);
     const post = postData.get({ plain: true });
     // const comments = commentData.get({ plain: true });
     res.render("postView", {

@@ -49,4 +49,10 @@ router.post('/postCreate', withAuth, async (req, res) => {
   });
 
 
+  router.get('./postUpdate', withAuth, async (req, res) => {
+    res.render('postUpdate', {
+      logged_in: req.session.logged_in 
+    });
+  })
+
 module.exports = router
