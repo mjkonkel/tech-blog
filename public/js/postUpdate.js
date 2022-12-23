@@ -5,15 +5,15 @@ const postFormHandler = async (event) => {
   const content = document.querySelector("#update-content").value.trim();
 
   if (title && content) {
-    const response = await fetch("/dashboard/postUpdate/:id", {
-      method: "POST",
+    const response = await fetch("/api/posts", {
+      method: "PUT",
       body: JSON.stringify({ title, content }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
       // If successful, redirect the browser to the dashboard page
-      document.location.replace("/dashboard/postUpdate/:id");
+      document.location.replace("/api/posts");
     } else {
       alert(response.statusText);
     }
