@@ -12,7 +12,7 @@ const postFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/api/posts");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
