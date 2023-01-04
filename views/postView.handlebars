@@ -1,5 +1,5 @@
 <div class="row mt-2 project d-flex justify-content-center">
-  <div class="col-10 border border-dark bg-home">
+  <div class="col-10 border border-dark bg-home rounded">
     <h2>{{title}}</h2>
     <p>{{content}}</p>
     <p>Posted by {{user.username}} on {{format_date updatedAt}}</p>
@@ -18,7 +18,7 @@
 
 {{#each comments as |comment|}}
   <div class="row mb-2 project d-flex justify-content-center">
-    <div class="col-9 border border-dark bg-comment">
+    <div class="col-9 border border-dark bg-comment rounded">
       <h2>
         <a>{{comment.content}}</a>
       </h2>
