@@ -15,3 +15,8 @@
 .bg-comment {
     background-color: rgb(235, 233, 233)
 }
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
