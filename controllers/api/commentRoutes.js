@@ -8,7 +8,6 @@ console.log(req.body)
     const newComment = await Comment.create({
       ...req.body,
       user_id: req.session.user_id,
-      //   from front end in req.body send comment contents and post id
     });
 
     res.status(200).json(newComment);
