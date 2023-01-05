@@ -20,10 +20,10 @@ To run the app locally, the necessary dependencies can be installed by running `
 >To begin using the app, users must first log in or sign up. Only authenticated users can view and create posts.<br>
 >![login](./images/login.JPG)
 
->The dashboard will show the posts that the user has created.<br>
+>The dashboard will show the posts that the user has created. By clicking on the title of a post from the dasboard, users can update or delete their posts.<br>
 >![dashboard](./images/dashboard.JPG)
 
->On the homepage, users can click on the title of a post to view who created the post and the date when it was created.<br>
+>On the homepage, users can click on the title of a post to view who created the post and the date when it was created. Users can also leave comments on posts.<br>
 >![one-post](./images/one-post.JPG)
 
 

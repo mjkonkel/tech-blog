@@ -29,7 +29,6 @@ router.get("/postCreate", withAuth, async (req, res) => {
 // display all posts on dashboard
 router.get("/", withAuth, async (req, res) => {
     try {
-      // Get all projects and JOIN with user data
       const postData = await Post.findAll({
         where: {
           user_id: req.session.user_id,
@@ -49,6 +48,4 @@ router.get("/", withAuth, async (req, res) => {
     }
   });
   
-
-
 module.exports = router;

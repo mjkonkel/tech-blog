@@ -1,7 +1,7 @@
 <div class="row mt-2 project d-flex justify-content-center">
   <div class="col-10 border border-dark bg-home rounded">
     <h2>{{title}}</h2>
-    <p>{{content}}</p>
+    <h3>{{content}}</h3>
     <p>Posted by {{user.username}} on {{format_date updatedAt}}</p>
   </div>
   <form class="form comment-form col-9 mt-2  d-flex justify-content-center align-items-center">
@@ -19,9 +19,9 @@
 {{#each comments as |comment|}}
   <div class="row mb-2 project d-flex justify-content-center">
     <div class="col-9 border border-dark bg-comment rounded">
-      <h2>
+      <h4>
         <a>{{comment.content}}</a>
-      </h2>
+      </h4>
       <p>-{{comment.user.username}} ,{{format_date comment.createdAt}}</p>
     </div>
   </div>
